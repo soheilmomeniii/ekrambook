@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Ekram Method — Design Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FBF8F1;--ink:#1B1A17;--ink-soft:#5C574C;--ink-faint:#8C8576;--accent:#8E2B20;--rule:#DAD2C0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#E5DFD1;color:var(--ink);font-family:"Newsreader",Georgia,serif;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 28px 90px;}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);}
+h1{font-size:clamp(34px,6vw,56px);font-weight:600;letter-spacing:-.02em;margin:12px 0 8px;}
+.sub{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-soft);max-width:60ch;line-height:1.6;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:42px;}
+.card{display:block;background:var(--paper);border:1px solid var(--rule);text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;overflow:hidden;}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(40,34,20,.16);}
+.frame{height:300px;border-bottom:1px solid var(--rule);overflow:hidden;background:#fff;position:relative;}
+.frame iframe{width:1280px;height:1280px;border:0;transform:scale(.5);transform-origin:top left;pointer-events:none;}
+.meta{padding:16px 18px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;}
+.meta .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);}
+.meta .t{font-size:19px;font-weight:600;}
+.meta .o{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-faint);}
+@media(max-width:680px){.grid{grid-template-columns:1fr;}.frame iframe{transform:scale(.34);}.frame{height:230px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">The Ekram Method · Design Directions</div>
+  <h1>Ten ways to land it</h1>
+  <p class="sub">Ten distinct 10/10 landing directions for the handbook. Same content, same palette, same downloads — different soul. Open each, then tell me which to ship.</p>
+  <div class="grid">
+    <a class="card" href="/v1/"><div class="frame"><iframe src="/v1/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Imprint</span><span class="o">v1</span></div></a>
+    <a class="card" href="/v2/"><div class="frame"><iframe src="/v2/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Epicenter</span><span class="o">v2</span></div></a>
+    <a class="card" href="/v3/"><div class="frame"><iframe src="/v3/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Spread</span><span class="o">v3</span></div></a>
+    <a class="card" href="/v4/"><div class="frame"><iframe src="/v4/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Dossier</span><span class="o">v4</span></div></a>
+    <a class="card" href="/v5/"><div class="frame"><iframe src="/v5/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The One Line</span><span class="o">v5</span></div></a>
+    <a class="card" href="/v6/"><div class="frame"><iframe src="/v6/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Monograph (Dark)</span><span class="o">v6</span></div></a>
+    <a class="card" href="/v7/"><div class="frame"><iframe src="/v7/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Catalog Card</span><span class="o">v7</span></div></a>
+    <a class="card" href="/v8/"><div class="frame"><iframe src="/v8/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Manifesto</span><span class="o">v8</span></div></a>
+    <a class="card" href="/v9/"><div class="frame"><iframe src="/v9/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Product Page</span><span class="o">v9</span></div></a>
+    <a class="card" href="/v10/"><div class="frame"><iframe src="/v10/" loading="lazy" scrolling="no"></iframe></div><div class="meta"><span class="t">The Field Manual</span><span class="o">v10</span></div></a>
+  </div>
+</div>
+</body>
+</html>
