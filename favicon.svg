@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="The Ekram Method">
-  <rect width="64" height="64" rx="14" fill="#8E2B20"/>
+  <rect width="64" height="64" rx="14" fill="#D21F28"/>
   <g fill="none" stroke="#FBF8F1">
     <circle cx="32" cy="32" r="19" stroke-width="2.6" opacity="0.6"/>
     <circle cx="32" cy="32" r="11.5" stroke-width="3.4"/>
