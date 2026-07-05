@@ -97,7 +97,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 /* ---------- BOOK MOCKUP ---------- */
 .book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;}
 .book{
-  width:296px;aspect-ratio:1/1.42;position:relative;
+  width:296px;aspect-ratio:1/1.5;position:relative;
   transform:rotateY(-18deg) rotateX(2.5deg);transform-style:preserve-3d;
   filter:drop-shadow(13px 17px 22px rgba(40,20,16,.34));
 }
@@ -115,15 +115,16 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
   background:repeating-linear-gradient(90deg,#efe7d4,#efe7d4 1px,#d8cfba 2px,#efe7d4 3px);
   transform:rotateY(34deg);transform-origin:left center;border-radius:0 2px 2px 0;
 }
-.nc-top{position:absolute;top:20px;left:22px;right:40px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--cover-cream);line-height:1;}
-.nc-title{position:absolute;left:18px;top:66px;font-family:"Anton","Arial Narrow",sans-serif;font-weight:400;font-size:66px;line-height:.78;letter-spacing:0;text-transform:uppercase;color:var(--cover-cream);transform:scaleX(1.04);transform-origin:left top;}
-.nc-tag{position:absolute;left:22px;bottom:42px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:11px;line-height:1.3;color:var(--cover-cream);}
-.nc-by{position:absolute;left:22px;bottom:23px;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8.5px;letter-spacing:.04em;color:rgba(240,233,214,.55);}
-.nc-axis{position:absolute;right:33px;top:22px;bottom:22px;width:16px;color:var(--cover-cream);}
-.nc-axis svg{width:100%;height:100%;display:block;}
-.nc-vlabel{position:absolute;writing-mode:vertical-rl;transform:rotate(180deg);font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;line-height:1;white-space:nowrap;}
-.nc-inev{top:52px;right:6px;color:var(--cover-cream);}
-.nc-invis{bottom:44px;right:8px;color:#A8141E;}
+.nc-top{position:absolute;top:24px;left:20px;right:52px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:var(--cover-cream);line-height:1;}
+.nc-title{position:absolute;left:20px;top:94px;font-family:"Anton","Arial Narrow",sans-serif;font-weight:400;font-size:66px;line-height:.80;letter-spacing:0;text-transform:uppercase;color:var(--cover-cream);transform:scaleX(.95);transform-origin:left top;}
+.nc-tag{position:absolute;left:20px;bottom:46px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:11.5px;line-height:1.35;color:var(--cover-cream);}
+.nc-by{position:absolute;left:20px;bottom:22px;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8.5px;letter-spacing:.04em;color:rgba(240,233,214,.55);}
+.nc-axisline{position:absolute;top:22px;bottom:22px;right:58px;width:1.4px;background:var(--cover-cream);}
+.nc-arrow{position:absolute;top:16px;right:54px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid var(--cover-cream);}
+.nc-dot{position:absolute;top:352px;right:53px;width:12px;height:12px;border-radius:50%;background:var(--cover-cream);}
+.nc-vlabel{position:absolute;writing-mode:vertical-rl;transform:rotate(180deg);font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:20px;letter-spacing:.10em;text-transform:uppercase;line-height:1;white-space:nowrap;}
+.nc-inev{top:20px;right:15px;color:var(--cover-cream);}
+.nc-invis{bottom:12px;right:17px;color:#A8141E;}
 
 /* ---------- COLOPHON (Quiet Luxe) ---------- */
 .colophon{flex:none;}
@@ -201,15 +202,13 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
         <div class="book-cover">
           <div class="nc-top">Position or be positioned</div>
           <div class="nc-title">THE<br>EKRAM<br>METHOD</div>
-          <div class="nc-tag">Positioning to<br>win<br>in the AI&nbsp;era</div>
+          <div class="nc-tag">Positioning to win<br>in the AI&nbsp;era</div>
           <div class="nc-by">Compiled by Somo</div>
           <div class="nc-vlabel nc-inev">Inevitable</div>
           <div class="nc-vlabel nc-invis">Invisible</div>
-          <span class="nc-axis" aria-hidden="true"><svg viewBox="0 0 20 376" preserveAspectRatio="xMidYMid meet" fill="none" stroke="currentColor">
-            <path d="M10 0 L4.5 13 L15.5 13 Z" fill="currentColor" stroke="none"/>
-            <line x1="10" y1="11" x2="10" y2="376" stroke-width="1.3"/>
-            <circle cx="10" cy="330" r="7" fill="currentColor" stroke="none"/>
-          </svg></span>
+          <div class="nc-axisline" aria-hidden="true"></div>
+          <div class="nc-arrow" aria-hidden="true"></div>
+          <div class="nc-dot" aria-hidden="true"></div>
         </div>
       </div>
     </div>
