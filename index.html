@@ -105,14 +105,19 @@ a{color:inherit;text-decoration:none;}
 
 /* ---------- BOOK (the one object of colour) ---------- */
 .book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;}
-.book{width:288px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));}
+.book{width:296px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));}
 .book-cover{position:absolute;inset:0;background:var(--accent);border-radius:2px 4px 4px 2px;overflow:hidden;box-shadow:inset -16px 0 34px rgba(0,0,0,.13), inset 0 1px 0 rgba(255,255,255,.05);}
 .book::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.07) 62%,rgba(255,255,255,.10));transform:translateZ(-1px);z-index:3;border-radius:2px 0 0 2px;}
 .book::after{content:"";position:absolute;right:-8px;top:5px;bottom:5px;width:10px;background:repeating-linear-gradient(90deg,#efe7d4,#efe7d4 1px,#d8cfba 2px,#efe7d4 3px);transform:rotateY(34deg);transform-origin:left center;border-radius:0 2px 2px 0;}
-.nc-top{position:absolute;top:24px;left:20px;right:52px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:9.7px;letter-spacing:.17em;text-transform:uppercase;color:var(--cover-cream);line-height:1;}
-.nc-title{position:absolute;left:20px;top:91px;font-family:"Anton",sans-serif;font-weight:400;font-size:64px;line-height:.80;text-transform:uppercase;color:var(--cover-cream);transform:scaleX(.95);transform-origin:left top;}
-.nc-tag{position:absolute;left:20px;bottom:45px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:11px;line-height:1.35;color:var(--cover-cream);}
-.nc-by{position:absolute;left:20px;bottom:22px;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8.3px;letter-spacing:.04em;color:rgba(240,233,214,.55);}
+.nc-top{position:absolute;top:26px;left:20px;right:52px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cover-cream);line-height:1;}
+.nc-title{position:absolute;left:20px;top:86px;display:flex;flex-direction:column;}
+.nc-title .tl{font-family:"Anton",sans-serif;font-weight:400;font-size:62px;line-height:.86;text-transform:uppercase;color:var(--cover-cream);transform:scaleX(.94);transform-origin:left top;}
+.nc-title .rl{width:42px;height:2px;background:var(--cover-cream);margin:8px 0;}
+.nc-tag{position:absolute;left:20px;bottom:70px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:11px;line-height:1.35;color:var(--cover-cream);}
+.nc-tagrule{position:absolute;left:20px;bottom:58px;width:42px;height:1.5px;background:var(--cover-cream);}
+.nc-by{position:absolute;left:20px;bottom:20px;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8.3px;letter-spacing:.03em;line-height:1.55;}
+.nc-by .b1{display:block;color:var(--cover-cream);}
+.nc-by .b2{display:block;color:rgba(240,233,214,.5);}
 .nc-axisline{position:absolute;top:22px;bottom:22px;right:56px;width:1.4px;background:var(--cover-cream);}
 .nc-arrow{position:absolute;top:16px;right:52px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid var(--cover-cream);}
 .nc-dot{position:absolute;top:342px;right:51px;width:12px;height:12px;border-radius:50%;background:var(--cover-cream);}
@@ -225,9 +230,10 @@ a{color:inherit;text-decoration:none;}
       <div class="book" role="img" aria-label="The Ekram Method — red book cover with the title in heavy type and an invisible-to-inevitable axis.">
         <div class="book-cover">
           <div class="nc-top">Position or be positioned</div>
-          <div class="nc-title">THE<br>EKRAM<br>METHOD</div>
+          <div class="nc-title"><span class="tl">THE</span><span class="rl"></span><span class="tl">EKRAM</span><span class="rl"></span><span class="tl">METHOD</span></div>
           <div class="nc-tag">Positioning to win<br>in the AI&nbsp;era</div>
-          <div class="nc-by">Compiled by Somo</div>
+          <div class="nc-tagrule"></div>
+          <div class="nc-by"><span class="b1">The collected thinking of Ekram</span><span class="b2">Compiled by Somo</span></div>
           <div class="nc-vlabel nc-inev">Inevitable</div>
           <div class="nc-vlabel nc-invis">Invisible</div>
           <div class="nc-axisline"></div>
