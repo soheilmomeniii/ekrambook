@@ -76,7 +76,7 @@ a{color:inherit;text-decoration:none;}
 .eyebrow-row{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
 .eyebrow{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mid);white-space:nowrap;}
 .eyebrow-row::after{content:"";flex:1;height:1px;background:var(--line);}
-.hero-title{font-family:"Jost",sans-serif;font-weight:300;font-size:clamp(40px,5.6vw,68px);line-height:1.02;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);}
+.hero-title{font-family:"Jost",sans-serif;font-weight:300;font-size:clamp(46px,6.4vw,82px);line-height:1.0;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);}
 .hero-sub{font-family:"Source Serif 4",serif;font-style:italic;font-weight:400;font-size:clamp(19px,2.3vw,24px);color:var(--slate);margin-top:20px;line-height:1.25;}
 .hero-desc{font-size:18px;line-height:1.55;color:#4A4A46;max-width:44ch;margin-top:22px;}
 .hero-desc b{color:var(--ink);font-weight:600;}
@@ -107,7 +107,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ---------- BOOK (the one object of colour) ---------- */
 .book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;}
-.book{width:296px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));}
+.book{width:296px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg) scale(1.13);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));}
 .book-cover{position:absolute;inset:0;background:var(--accent);border-radius:2px 4px 4px 2px;overflow:hidden;box-shadow:inset -16px 0 34px rgba(0,0,0,.13), inset 0 1px 0 rgba(255,255,255,.05);}
 .book::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.07) 62%,rgba(255,255,255,.10));transform:translateZ(-1px);z-index:3;border-radius:2px 0 0 2px;}
 .book::after{content:"";position:absolute;right:-8px;top:5px;bottom:5px;width:10px;background:repeating-linear-gradient(90deg,#efe7d4,#efe7d4 1px,#d8cfba 2px,#efe7d4 3px);transform:rotateY(34deg);transform-origin:left center;border-radius:0 2px 2px 0;}
