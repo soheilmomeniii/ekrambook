@@ -106,8 +106,11 @@ a{color:inherit;text-decoration:none;}
 .trust a:hover{color:var(--ink);border-color:var(--ink);}
 
 /* ---------- BOOK (the one object of colour) ---------- */
-.book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;}
-.book{width:296px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg) scale(1.13);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));}
+.book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;animation:bookIn .85s cubic-bezier(.2,.7,.2,1) both, floaty 6.5s ease-in-out .95s infinite;}
+@keyframes bookIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+.book{width:296px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg) scale(1.13);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));transition:transform .28s cubic-bezier(.2,.7,.2,1);will-change:transform;}
+@media (prefers-reduced-motion:reduce){.book-stage{animation:none;}.book{transition:none;}}
 .book-cover{position:absolute;inset:0;background:var(--accent);border-radius:2px 4px 4px 2px;overflow:hidden;box-shadow:inset -16px 0 34px rgba(0,0,0,.13), inset 0 1px 0 rgba(255,255,255,.05);}
 .book::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.07) 62%,rgba(255,255,255,.10));transform:translateZ(-1px);z-index:3;border-radius:2px 0 0 2px;}
 .book::after{content:"";position:absolute;right:-8px;top:5px;bottom:5px;width:10px;background:repeating-linear-gradient(90deg,#efe7d4,#efe7d4 1px,#d8cfba 2px,#efe7d4 3px);transform:rotateY(34deg);transform-origin:left center;border-radius:0 2px 2px 0;}
@@ -274,6 +277,23 @@ document.addEventListener('DOMContentLoaded',function(){
     el.addEventListener('click',function(){try{window.va('event',{name:m[1]});}catch(e){}});
   });});
 });
+</script>
+<script>
+/* Cursor-parallax tilt on the book (pointer devices, motion allowed) */
+(function(){
+  var book=document.querySelector('.book'), hero=document.querySelector('.hero');
+  if(!book||!hero) return;
+  var mm=window.matchMedia;
+  if(mm&&(mm('(prefers-reduced-motion: reduce)').matches||!mm('(hover:hover) and (pointer:fine)').matches)) return;
+  var baseRy=-18, baseRx=2.5, RANGE=9, SC=1.13;
+  hero.addEventListener('mousemove',function(e){
+    var r=book.getBoundingClientRect(), cx=r.left+r.width/2, cy=r.top+r.height/2;
+    var nx=Math.max(-1,Math.min(1,(e.clientX-cx)/(window.innerWidth/2)));
+    var ny=Math.max(-1,Math.min(1,(e.clientY-cy)/(window.innerHeight/2)));
+    book.style.transform='rotateY('+(baseRy+nx*RANGE).toFixed(2)+'deg) rotateX('+(baseRx-ny*RANGE).toFixed(2)+'deg) scale('+SC+')';
+  },{passive:true});
+  hero.addEventListener('mouseleave',function(){ book.style.transform=''; });
+})();
 </script>
 </body>
 </html>
